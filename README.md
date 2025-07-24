@@ -11,7 +11,7 @@ A responsive web interface built using **HTML**, **CSS**, and **JavaScript** to 
 
 ---
 
-## 🚀 Features
+##  Features
 
 - Dynamic invoice listing and details view  
 - Form-based invoice creation and editing  
@@ -21,7 +21,7 @@ A responsive web interface built using **HTML**, **CSS**, and **JavaScript** to 
 
 ---
 
-## 🛠 Tech Stack
+##  Tech Stack
 
 - **HTML5** – Structure and semantics  
 - **CSS3** – Custom styling and responsiveness  
@@ -29,57 +29,7 @@ A responsive web interface built using **HTML**, **CSS**, and **JavaScript** to 
 
 ---
 
-## 📁 Folder Structure
-
-```
-
-📂 invoice-kenshiLabs-frontend
-├── index.html         # Homepage / Dashboard
-├── create.html        # Invoice creation page
-├── edit.html          # Invoice editing
-├── view\.html          # Invoice details view
-├── css/
-│   └── style.css      # All custom styles
-├── js/
-│   └── main.js        # JavaScript functions (API calls, validation)
-└── README.md          # Project documentation
-
-````
-
----
-
-## 🔧 Setup Instructions
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/invoice-kenshiLabs-frontend.git
-````
-
-2. Open `index.html` in your browser or serve via local server (optional).
-
-3. Make sure the backend (Go + MongoDB API) is running and endpoints are configured correctly in your `main.js`.
-
----
-
-## 🌐 API Integration
-
-This frontend communicates with the [Invoice Management Backend (Golang)](https://github.com/your-username/invoice-kenshiLabs) using REST APIs:
-
-* `GET /invoices` – List invoices
-* `POST /invoices` – Create invoice
-* `GET /invoices/:id` – View invoice
-* `PUT /invoices/:id` – Update invoice
-* `DELETE /invoices/:id` – Delete invoice
-
----
-
-## 📸 Screenshots
-
-*Add screenshots here if available*
-
----
-
-## 📬 Contact
+##  Contact
 
 For questions or collaboration, feel free to reach out:
 
