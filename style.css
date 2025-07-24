@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.invoice-box {
+  width: 794px; /* A4 width at 96dpi */
+  min-height: 1123px; /* A4 height at 96dpi */
+  background: #fff;
+  padding: 32px 24px;
+  box-sizing: border-box;
+  margin: 24px 0;
+  box-shadow: 0 0 10px rgba(0,0,0,0.15);
+  border: 2px solid #222;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 100px;
+}
+
+.invoice-title h1 {
+  color: #d32f2f;
+  margin: 0;
+}
+
+.address-box {
+  border: 2px solid #d32f2f;
+  border-radius: 8px;
+  background: #fafafa;
+  padding: 16px;
+  margin-bottom: 24px;
+}
+
+.address-inner {
+  display: flex;
+  gap: 24px;
+}
+
+.address-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.address-col h3 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  color: #d32f2f;
+  font-size: 1.1rem;
+}
+
+.textarea-outer {
+  border: 2px solid #bbb;
+  border-radius: 6px;
+  background: #fff;
+  padding: 6px;
+  margin-top: 4px;
+}
+
+.address-col textarea {
+  width: 100%;
+  border: none;
+  background: transparent;
+  font-size: 1rem;
+  font-family: inherit;
+  resize: none;
+  outline: none;
+  color: #222;
+  min-height: 100px;
+  box-sizing: border-box;
+}
+
+.invoice-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.invoice-table th, .invoice-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+.invoice-table input {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 4px;
+}
+
+.summary {
+  margin-top: 20px;
+  text-align: right;
+}
+
+.summary input {
+  width: 150px;
+  padding: 5px;
+  margin-left: 10px;
+}
+
+.footer {
+  margin-top: 32px;
+  padding-top: 0;
+}
+
+.footer-divider {
+  border: none;
+  border-top: 2px solid #d32f2f;
+  margin: 32px 0 24px 0;
+}
+
+.footer-billing {
+  margin-bottom: 24px;
+}
+
+.billing-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #444;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 8px;
+}
+
+.billing-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+
+.billing-col {
+  flex: 1;
+  min-width: 220px;
+  font-size: 1rem;
+  color: #222;
+  line-height: 1.7;
+}
+
+.billing-col.right {
+  text-align: right;
+}
+
+.footer-thankyou {
+  text-align: center;
+  color: #d32f2f;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 32px 0 16px 0;
+}
+
+.footer-terms {
+  margin-top: 16px;
+}
+
+.terms-title {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 4px;
+}
+
+.terms-textarea {
+  width: 100%;
+  border: none;
+  background: transparent;
+  font-size: 1rem;
+  font-family: inherit;
+  color: #222;
+  resize: vertical;
+  min-height: 48px;
+  border-radius: 0;
+  padding: 0;
+  outline: none;
+  border-bottom: 1px solid #ccc;
+}
+
+.action-row {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+  margin: 24px 0 0 0;
+}
+
+.add-item-btn {
+  background: #d32f2f;
+  color: #fff;
+  border: none;
+  padding: 10px 28px;
+  font-size: 1.1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(211,47,47,0.08);
+}
+
+.add-item-btn:hover {
+  background: #b71c1c;
+  box-shadow: 0 4px 16px rgba(211,47,47,0.16);
+}
+
+.add-item-btn:active {
+  background: #880808;
+}
+
+.download-row {
+  display: flex;
+  justify-content: center;
+  margin: 32px 0 0 0;
+}
+
+.download-btn {
+  background: #d32f2f;
+  color: #fff;
+  border: none;
+  padding: 12px 36px;
+  font-size: 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(211,47,47,0.08);
+}
+
+.download-btn:hover {
+  background: #b71c1c;
+  box-shadow: 0 4px 16px rgba(211,47,47,0.16);
+}
+
+.download-btn:active {
+  background: #880808;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 840px) {
+  .invoice-box {
+    width: 100%;
+    padding: 20px 16px;
+    margin: 16px 8px;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .invoice-title {
+    width: 100%;
+  }
+
+  .address-inner {
+    flex-direction: column;
+  }
+
+  .billing-row {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .billing-col.right {
+    text-align: left;
+  }
+
+  .summary input {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 8px;
+  }
+}
+
+/* Print Optimization */
+@media print {
+  html, body {
+    width: 210mm;
+    height: 297mm;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #fff !important;
+  }
+
+  .invoice-box {
+    border: none !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+  }
+
+  .download-row, .add-item-btn {
+    display: none !important;
+  }
+
+  input, textarea {
+    border: none !important;
+    background: transparent !important;
+    color: #000 !important;
+  }
+}

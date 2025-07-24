@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kenshi Labs Invoice</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <div class="invoice-box" id="invoiceContent">
+    <div class="header">
+      <img src="logo.jpg" alt="Logo" class="logo" />
+      <div class="invoice-title">
+        <h1>INVOICE</h1>
+        <p>Invoice No: <input type="text" id="invoiceNo" value="KL/25-26/0001"></p>
+        <p>Date: <input type="date" id="invoiceDate"></p>
+      </div>
+    </div>
+
+    <div class="address-box">
+      <div class="address-inner">
+        <div class="address-col">
+          <h3>INVOICE TO:</h3>
+          <div class="textarea-outer">
+            <textarea id="invoiceTo" rows="6"></textarea>
+          </div>
+        </div>
+        <div class="address-col">
+          <h3>INVOICE FROM:</h3>
+          <div class="textarea-outer">
+            <textarea id="invoiceFrom" rows="6">KENSHI LABS
+104, 1st Floor, Spandhana Vimala Elite
+JP Nagar, Bengaluru, Karnataka - 560078
+Email: tech@kenshilabs.com</textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <table class="invoice-table">
+      <thead>
+        <tr>
+          <th>Description</th>
+          <th>Qty</th>
+          <th>Unit Price (₹)</th>
+          <th>Total (₹)</th>
+        </tr>
+      </thead>
+      <tbody id="itemList">
+        <tr>
+          <td><input type="text" value=""></td>
+          <td><input type="number" value="1" oninput="calculateTotal()"></td>
+          <td><input type="number" value="" oninput="calculateTotal()"></td>
+          <td class="item-total"></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="action-row">
+      <button class="add-item-btn" onclick="addRow()">+ Add Item</button>
+    </div>
+
+    <div class="summary">
+      <p>Advance Paid (₹): <input type="number" id="advancePaid" value="" oninput="calculateTotal()"></p>
+      <p>Subtotal (₹): <span id="subtotal">0</span></p>
+      <p>IGST 18% (₹): <span id="tax">0</span></p>
+      <p><strong>Total Invoice (₹): <span id="grandTotal">0</span></strong></p>
+      <p><strong>Due Amount (₹): <span id="due">0</span></strong></p>
+    </div>
+
+    <div class="footer">
+      <hr class="footer-divider">
+      <div class="footer-billing">
+        <div class="billing-title">Billing Details</div>
+        <div class="billing-row">
+          <div class="billing-col">
+            <strong>KENSHI LABS CONSULTANCY PRIVATE LIMITED</strong><br><br>
+            <strong>A/C No:</strong> 50200100132917<br>
+            <strong>HDFC BANK</strong><br>
+            <strong>Branch:</strong> JP NAGAR 6TH PHASE<br>
+            <strong>IFSC:</strong> HDFC0004963
+          </div>
+          <div class="billing-col right">
+            <strong>TAN No:</strong> BLRK29912B<br>
+            <strong>GSTIN:</strong> 29AALCK1673K1ZZ<br>
+            <strong>PAN:</strong> AALCK1673K<br>
+            <strong>CIN:</strong> U62013KA2024PTC190864
+          </div>
+        </div>
+      </div>
+      <div class="footer-thankyou">Thank you For Your Business</div>
+      <div class="footer-terms">
+        <div class="terms-title"><strong>Terms & Conditions</strong></div>
+        <textarea class="terms-textarea" rows="2">This invoice includes services as per the previously shared proposal; any revisions or additional requests beyond the agreed scope will be charged separately and invoiced after mutual discussion. Full payment confirms acceptance of these terms.</textarea>
+      </div>
+    </div>
+
+    <div class="download-row">
+      <button class="download-btn" onclick="downloadPDF()">Download Invoice</button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
